@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="style.css" />
  </head>
  <body>
+ <div align="center"><image src="images/arriba.jpg" width="1500" height="300" ></div>
+
   <h1 style="text-align:center;"></h1>
   <table>
    <?php
@@ -25,9 +27,9 @@
       // output data of each row
       while($row = $result->fetch_assoc()) {?>
       <tr>
+      <td><image src=<?php echo $row['imagen_servicio']?>> </td>
       <td><?php echo $row['nombre_servicio']?></td>
       <td><?php echo $row['descripcion_servicio']?></td>
-      <td><?php echo $row['imagen_servicio']?></td>
       </tr>
      <?php }
   } else {
@@ -36,6 +38,7 @@
   $conn->close();
  ?> 
  </table>
+ <div align="center"><image src="images/abajo.jpg" width="1500" height="300" ></div>
  </body>
  </html>
 
